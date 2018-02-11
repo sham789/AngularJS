@@ -13,13 +13,20 @@ angular.module('myApp.view1', ['ngRoute'])
 
 }]);
 
-var phoneApp = angular.module('phoneApp', []);
+var phone = angular.module('phone', []);
 
-phoneApp.controller('phoneList', function ($scope) {
-  $scope.phones = [
-      {name: 'Apple iPhone 8 64Gb Space Gray', snippet: 'Faster stronger'},
-      {name: 'Apple iPhone 7 64Gb White', snippet: 'Faster stronger'},
-      {name: 'Apple iPhone 6 64Gb Space Gray', snippet: 'Faster stronger'},
-      {name: 'Apple iPhone 5S 64Gb White', snippet: 'Faster stronger'}
-  ]
-})
+phone.controller('phoneList', function ($scope) {
+    $scope.title = 'Смартфоны';
+    $scope.phones = [
+        {'name': 'Apple iPhone 8 64Gb Space Gray',
+            'snippet':'Faster stronger'},
+        {'name': 'Apple iPhone 7 64Gb White',
+            'snippet': 'Faster stronger'},
+        {'name': 'Apple iPhone 6 64Gb Space Gray',
+            'snippet': 'Faster stronger'},
+        {'name': 'Apple iPhone 5S 64Gb White',
+            'snippet': 'Faster stronger'}
+    ];
+    var date = new Date();
+    $scope.today = date;
+});
